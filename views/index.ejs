@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts | Quora</title>
+    <link rel="stylesheet" href="/stylesheets/indexstyle.css">
+</head>
+<body>
+    <h1>Quora Posts</h1>
+
+    <% for(let post of posts) { %>
+        <div class="post">
+            <h2><%= post.title %></h2>
+            <p><%- post.content %></p>
+            <div>
+                <div>
+                    <button>Delete post</button>
+                    <button><a href=<%= "http://localhost:3000/posts/" + post.id %>>See in Detail</a></button>
+                </div>
+                <p>-- By <span><%= post.username %></span></p>
+            </div>
+        </div>
+    <% } %>
+    
+    <button><a href="http://localhost:3000/posts/new">Create New Post</a></button>
+</body>
+</html>

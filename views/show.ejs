@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Post in Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: coral;
+        }
+
+        .outer {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .outer>div {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .outer>div>p:nth-child(1){
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Post in Detail</h1>
+    <div class="outer">
+        <div>
+            <p>Id: </p>
+            <p><%= post.id %></p>
+        </div>
+        <div>
+            <p>Title: </p>
+            <p><%= post.title %></p>
+        </div>
+        <div>
+            <p>Content: </p>
+            <p><%- post.content %></p>
+        </div>
+        <div>
+            <p>Username: </p>
+            <p><%= post.username %></p>
+        </div>
+    </div>
+</body>
+</html>
