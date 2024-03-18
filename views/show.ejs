@@ -20,37 +20,21 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .outer>div {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .outer>div>p:nth-child(1){
-            font-weight: bold;
-            font-size: 1.5rem;
-        }
+        h3{
+            text-decoration: underline;
+        }        
     </style>
 </head>
 <body>
     <h1>Your Post in Detail</h1>
     <div class="outer">
-        <div>
-            <p>Id: </p>
-            <p><%= post.id %></p>
-        </div>
-        <div>
-            <p>Title: </p>
-            <p><%= post.title %></p>
-        </div>
-        <div>
-            <p>Content: </p>
-            <p><%- post.content %></p>
-        </div>
-        <div>
-            <p>Username: </p>
-            <p><%= post.username %></p>
-        </div>
-    </div>
+        <h3>Id :</h3>
+        <p><%= post.id %></p>
+        <h3>Title :</h3>
+        <p><%= post.title %></p>
+        <h3>Content :</h3>
+        <p><%- post.content.replace(/\n/g, '<br>') %></p>
+        <h3>Username :</h3>
+        <p><%= post.username %></p>
 </body>
 </html>
